@@ -40,6 +40,10 @@ python3 -m http.server 8765 --directory .
 
 ## Як додаток на iPhone
 
+Жива адреса: https://savkamikola05-sudo.github.io/xp-tracker/
+
+Оновлення: закомітити зміни й `git push` у `main`, Pages перебудується за хвилину.
+
 Це PWA: маніфест, іконка, офлайн-кеш через service worker. Потрібна HTTPS-адреса.
 
 ### Варіант 1. GitHub Pages (постійно, безкоштовно)
