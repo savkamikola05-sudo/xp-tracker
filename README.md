@@ -37,3 +37,35 @@ python3 -m http.server 8765 --directory .
 - Позначка «протестовано» в Банку хуків додає +1 до сьогоднішнього лічильника хуків.
 
 Пороги й норми — константи `RANKS`, `REGULAR_VIDEOS_PER_WEEK`, `DECAY_PER_IDLE_WEEK` у `store.js`.
+
+## Як додаток на iPhone
+
+Це PWA: маніфест, іконка, офлайн-кеш через service worker. Потрібна HTTPS-адреса.
+
+### Варіант 1. GitHub Pages (постійно, безкоштовно)
+
+1. Зареєструйся або увійди на github.com.
+2. Створи новий репозиторій: назва `xp-tracker`, Public, без README.
+3. На сторінці репозиторію натисни «uploading an existing file», перетягни всі файли
+   з цієї папки (разом із папкою `icons`, `.nojekyll` теж), натисни Commit changes.
+4. Settings → Pages → Source: Deploy from a branch → Branch: `main`, папка `/ (root)` → Save.
+5. Через хвилину адреса `https://<твій-логін>.github.io/xp-tracker/` запрацює.
+6. На iPhone відкрий цю адресу в Safari → кнопка Поділитись → «На Початковий екран».
+
+Оновлення застосунку: завантаж змінені файли тим самим способом.
+Якщо встановиш GitHub CLI (`gh auth login`), Claude Code зможе пушити й вмикати Pages сам.
+
+### Варіант 2. Тимчасово по Wi-Fi з Mac
+
+```bash
+python3 -m http.server 8765 --bind 0.0.0.0
+```
+
+На iPhone у тій самій мережі відкрий `http://<IP-Mac>:8765`. IP можна дізнатись:
+
+```bash
+ipconfig getifaddr en0
+```
+
+Без HTTPS офлайн-режим не працює, але «На Початковий екран» дає повноекранний вигляд.
+Дані живуть у браузері на телефоні, окремо для кожної адреси. Роби експорт JSON (екран «Рік»).
