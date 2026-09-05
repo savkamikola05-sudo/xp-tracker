@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-title" content="XP">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>XP Tracker</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <main id="view"></main>
+</div>
+<nav class="tabbar" id="tabbar">
+  <button class="tab" data-tab="today">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/></svg>
+    <span>Сьогодні</span>
+  </button>
+  <button class="tab" data-tab="week">
+    <svg viewBox="0 0 24 24"><path d="M4 18V10M9 18V6M14 18v-8M19 18V4"/></svg>
+    <span>Тиждень</span>
+  </button>
+  <button class="tab" data-tab="month">
+    <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16"/></svg>
+    <span>Місяць</span>
+  </button>
+  <button class="tab" data-tab="year">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>
+    <span>Рік</span>
+  </button>
+  <button class="tab" data-tab="journal">
+    <svg viewBox="0 0 24 24"><path d="M5 6h14M5 12h14M5 18h9"/></svg>
+    <span>Щоденник</span>
+  </button>
+  <button class="tab" data-tab="hooks">
+    <svg viewBox="0 0 24 24"><path d="M7 4h10v16l-5-4-5 4z"/></svg>
+    <span>Хуки</span>
+  </button>
+</nav>
+<script src="store.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
